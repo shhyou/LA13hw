@@ -4,6 +4,10 @@
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{amssymb}
+\usepackage{mathrsfs}
+\usepackage{extarrows}
+\usepackage{algorithmicx, algpseudocode, algorithm}
+\usepackage{hyperref}
 
 \theoremstyle{definition}
 \newtheorem{defn}[subsection]{Definition}
@@ -15,6 +19,14 @@
 \theoremstyle{remark}
 \newtheorem{ex}[subsection]{Example}
 \newtheorem{rem}[subsection]{Remark}
+
+% for hyperref
+\def\lemcounterautorefname{Lemma}
+\def\thmcounterautorefname{Theorem}
+\def\propcounterautorefname{Proposition}
+\def\corcounterautorefname{Corollary}
+\def\defncounterautorefname{Definition}
+\def\remcounterautorefname{Remark}
 
 \newcommand{\N}{\mathbb N}
 \newcommand{\Z}{\mathbb Z}
@@ -35,3 +47,113 @@
 
 % linear algebra shortcuts
 \newcommand{\F}{\mathcal F}
+
+%denpa macro
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\image}{im}
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\ord}{ord}
+\DeclareMathOperator{\ann}{ann}
+\DeclareMathOperator{\tor}{tor}
+\DeclareMathOperator{\diag}{diag}
+\DeclareMathOperator{\Lie}{Lie}
+
+\DeclareMathOperator{\tilhodge}{\til{\star}}
+\DeclareMathOperator{\hodge}{\star}
+\DeclareMathOperator{\coker}{coker}
+\DeclareMathOperator{\Char}{char}
+\DeclareMathOperator{\tr}{tr}
+\DeclareMathOperator{\reg}{reg}
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\acos}{arccos}
+\DeclareMathOperator{\Inv}{Inv}
+\DeclareMathOperator{\Gal}{Gal}
+\DeclareMathOperator{\Hol}{Hol}
+\DeclareMathOperator{\Isom}{Isom}
+\DeclareMathOperator{\Funct}{Funct}
+\DeclareMathOperator{\GL}{GL}
+\DeclareMathOperator{\supp}{supp}
+\DeclareMathOperator{\Stab}{Stab}
+\DeclareMathOperator{\Fix}{Fix}
+\DeclareMathOperator{\op}{op}
+\DeclareMathOperator{\ob}{ob}
+\DeclareMathOperator{\Res}{Res}
+\DeclareMathOperator{\Ric}{Ric}
+\DeclareMathOperator{\Vol}{Vol}
+\DeclareMathOperator{\Str}{Str}
+\DeclareMathOperator{\Hess}{Hess}
+\DeclareMathOperator{\pr}{pr}
+\DeclareMathOperator{\ind}{ind}
+\DeclareMathOperator{\ch}{ch}
+\newcommand{\la}{\left\langle}
+\newcommand{\lp}{\left(}
+\newcommand{\rp}{\right)}
+\renewcommand{\div}{\mathrm{div}}
+\renewcommand{\Im}{\mathfrak{Im}\,}
+\renewcommand{\Re}{\mathfrak{Re}\,}
+\newcommand{\grad}{\mathrm{grad}}
+\newcommand{\ra}{\right\rangle}
+\newcommand{\real}{\mathbb R}
+\newcommand{\complex}{\mathbb C}
+\newcommand{\bbR}{\mathbb R}
+\newcommand{\bbZ}{\mathbb Z}
+\newcommand{\bbN}{\mathbb N}
+\newcommand{\bbC}{\mathbb C}
+\newcommand{\bfR}{\mathbf R}
+\newcommand{\bfZ}{\mathbf Z}
+\newcommand{\bfC}{\mathbf C}
+\newcommand{\bfX}{\mathbf X}
+\newcommand{\calO}{\mathcal O}
+\newcommand{\calM}{\mathcal M}
+\newcommand{\calK}{\mathcal K}
+\newcommand{\calU}{\mathcal U}
+\newcommand{\fraka}{\mathfrak{a}}
+\newcommand{\frakb}{\mathfrak{b}}
+\newcommand{\frakc}{\mathfrak{c}}
+\newcommand{\frakd}{\mathfrak{d}}
+\newcommand{\frake}{\mathfrak{e}}
+\newcommand{\frakf}{\mathfrak{f}}
+\newcommand{\frakg}{\mathfrak{g}}
+\newcommand{\frakh}{\mathfrak{h}}
+\newcommand{\fraki}{\mathfrak{i}}
+\newcommand{\frakj}{\mathfrak{j}}
+\newcommand{\frakk}{\mathfrak{k}}
+\newcommand{\frakl}{\mathfrak{l}}
+\newcommand{\frakm}{\mathfrak{m}}
+\newcommand{\frakn}{\mathfrak{n}}
+\newcommand{\frako}{\mathfrak{o}}
+\newcommand{\frakp}{\mathfrak{p}}
+\newcommand{\frakq}{\mathfrak{q}}
+\newcommand{\frakr}{\mathfrak{r}}
+\newcommand{\fraks}{\mathfrak{s}}
+\newcommand{\frakt}{\mathfrak{t}}
+\newcommand{\fraku}{\mathfrak{u}}
+\newcommand{\frakv}{\mathfrak{v}}
+\newcommand{\frakw}{\mathfrak{w}}
+\newcommand{\frakx}{\mathfrak{x}}
+\newcommand{\fraky}{\mathfrak{y}}
+\newcommand{\frakz}{\mathfrak{z}}
+\newcommand{\fraksl}{\mathfrak{sl}}
+\newcommand{\frakgl}{\mathfrak{gl}}
+\newcommand{\fraksp}{\mathfrak{sp}}
+\newcommand{\frakso}{\mathfrak{so}}
+\newcommand{\fraksu}{\mathfrak{su}}
+\newcommand{\dR}{\mathrm{dR}}
+\newcommand{\diff}[1]{\frac{\partial}{\partial #1}}
+\newcommand{\difft}[2]{\left.\frac{d}{d #1}\left(#2\right)\right|_{#1=0}}
+\newcommand{\diffat}[2]{\left.\diff{#1}\right|_{#2}}
+\newcommand{\difff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\codiff}[1]{\C_{\partial_{#1}}}
+\newcommand{\lie}[2]{\left[#1, #2\right]}
+\newcommand{\D}{\partial}
+\newcommand{\Db}{\overline\partial}
+\renewcommand{\C}{\nabla}
+\newcommand{\CC}{\overline{\nabla}}
+\newcommand{\thefunc}[3]{\theta_{\tau}\genfrac{[}{]}{0pt}{}{#1}{#2}\left(#3\right)}
+\newcommand{\thefuncexp}[3]{\sum_{n\in \bbZ}\exp\left( \pi i \left( (n+#1)^2\tau + 2(n+#1)(#3+#2) \right) \right)}
+\newcommand{\quo}[2]{{\raisebox{.2em}{$#1$}\left/\raisebox{-.2em}{$#2$}\right.}}
+\newcommand{\til}{\widetilde}
+\newcommand{\ba}{\overline}
+\newcommand{\ha}{\widehat}
+\newcommand{\abs}[1]{\left|#1\right|}
